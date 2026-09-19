@@ -48,9 +48,9 @@ const pages = {
 
   "/contato": `
         <section>
-            <h2>Contato</h2>
+            <h2 id="contato-titulo">Contato</h2>
 
-            <form id="contact-form">
+              <form id="contact-form" aria-labelledby="contato-titulo">
 
                 <label for="nome">Nome</label>
 
@@ -74,12 +74,37 @@ const pages = {
                     Enviar mensagem
                 </button>
 
-                <p id="form-message"></p>
+                <p id="form-message" aria-live="polite"></p>
 
             </form>
         </section>
     `,
 };
+
+/* ================================
+   Alternância de tema
+================================ */
+
+const themeToggle = document.getElementById("theme-toggle");
+
+const temaSalvo = localStorage.getItem("tema");
+
+if (temaSalvo === "dark") {
+  document.body.classList.add("dark-mode");
+  themeToggle.textContent = "☀️ Modo claro";
+}
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("tema", "dark");
+    themeToggle.textContent = "☀️ Modo claro";
+  } else {
+    localStorage.setItem("tema", "light");
+    themeToggle.textContent = "🌙 Modo escuro";
+  }
+});
 
 /* ================================
    Renderização das páginas

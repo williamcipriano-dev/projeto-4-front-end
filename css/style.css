@@ -176,3 +176,64 @@ form button {
 .input-error:focus {
     outline: 3px solid #EF9A9A;
 }
+
+/* ================================
+   Modo escuro manual
+================================ */
+
+body.dark-mode {
+    background: #121212;
+    color: #FFFFFF;
+}
+
+body.dark-mode header {
+    background: #1B5E20;
+}
+
+body.dark-mode section {
+    background: #1E1E1E;
+}
+
+body.dark-mode section h2,
+body.dark-mode .card-projeto h3 {
+    color: #81C784;
+}
+
+body.dark-mode .card-projeto {
+    background: #1E1E1E;
+    border-color: #555555;
+}
+
+body.dark-mode .badge {
+    background: #2E7D32;
+    color: #FFFFFF;
+}
+
+body.dark-mode form input {
+    background: #2A2A2A;
+    color: #FFFFFF;
+    border-color: #777777;
+}
+
+body.dark-mode form input:focus {
+    outline: 3px solid #90CAF9;
+    border-color: #90CAF9;
+}
+
+body.dark-mode .input-success {
+    background: #1B3A1E;
+    border-color: #81C784;
+}
+
+body.dark-mode .input-error {
+    background: #3A1B1B;
+    border-color: #EF9A9A;
+}
+
+#theme-toggle {
+    margin-top: 15px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
